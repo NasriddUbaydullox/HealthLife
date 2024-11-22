@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\GitHubForTest\\",
+  "WorkspaceRootPath": "D:\\ForGitHub\\HealthLife\\GitHubForTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3DF5C3B-5BAA-469B-9509-32591BDB88E8}|GitHubForTest.csproj|c:\\users\\user\\source\\repos\\githubfortest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3DF5C3B-5BAA-469B-9509-32591BDB88E8}|GitHubForTest.csproj|d:\\forgithub\\healthlife\\githubfortest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3DF5C3B-5BAA-469B-9509-32591BDB88E8}|GitHubForTest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GitHubForTest\\Program.cs",
+              "DocumentMoniker": "D:\\ForGitHub\\HealthLife\\GitHubForTest\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GitHubForTest\\Program.cs",
+              "ToolTip": "D:\\ForGitHub\\HealthLife\\GitHubForTest\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T09:40:21.131Z",
               "EditorCaption": ""
