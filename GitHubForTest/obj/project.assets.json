@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\GitHubForTest\\GitHubForTest.csproj",
+      "projectUniqueName": "D:\\ForGitHub\\HealthLife\\HealthLife\\GitHubForTest\\GitHubForTest.csproj",
       "projectName": "GitHubForTest",
-      "projectPath": "C:\\Users\\user\\source\\repos\\GitHubForTest\\GitHubForTest.csproj",
+      "projectPath": "D:\\ForGitHub\\HealthLife\\HealthLife\\GitHubForTest\\GitHubForTest.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\GitHubForTest\\obj\\",
+      "outputPath": "D:\\ForGitHub\\HealthLife\\HealthLife\\GitHubForTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
