@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GitHubForTest": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
