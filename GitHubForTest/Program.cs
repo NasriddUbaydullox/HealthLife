@@ -6,7 +6,7 @@ namespace GitHubForTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello world 1");
+            Console.WriteLine("for dev/products-added commit 1");
         }
     }
 }
