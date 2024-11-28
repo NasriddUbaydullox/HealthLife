@@ -1,58 +1,83 @@
-﻿namespace Exeption_Handling
+﻿
+using System;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace Expense_tracker
 {
     internal class Program
     {
-        public static string orgUserName = "Admin";
-        public static string orgPassword = "Password";
+        public static string path = @"D:\temp\Expense_tracker.txt";
+
         static void Main(string[] args)
         {
-            Console.Write("Username: ");
-            string userName = Console.ReadLine();
-            Console.Write("\nPassword: ");
-            string password = Console.ReadLine();
-            try
+            FileInfo fileInfo = new FileInfo(path);
+            if (fileInfo.Length == 0)
             {
-                ValidateUser(userName, password);
-            }
-            catch (Exception e)
-            {
-                Console.Clear();
-                UserException a = new UserException();
-                Console.WriteLine(a.Message);
-                
-            }
-            finally
-            {
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    var sb = """
+        | Expense        | Amount  | Date    |
+        ======================================
+        """;
 
-                Console.WriteLine("Session finished ");
-
+                    sw.WriteLine(sb);
+                }
+            }
+            bool check = true;
+            while (check)
+            {
+                string Expense;
+                Console.Write("Expense name: ");
+                Expense = Console.ReadLine();
+                Console.Write("\nAmount: ");
+                int Amount = int.Parse(Console.ReadLine());
+                Console.Write("\nDate (HH:mm): ");
+                string Time = Console.ReadLine();
+                if (!isValidTime(Time))
+                {
+                    while (!isValidTime(Time))
+                    {
+                        Console.WriteLine("vaqt hato kiritildi , Iltimos boshidan kiriting:");
+                        Console.Write("Date (HH:mm): ");
+                        Time = Console.ReadLine();
+                    }
+                }
+                if (isValidTime(Time))
+                {
+                    Console.WriteLine("\nHit enter to add expense...");
+                    string input = Console.ReadLine();
+                    Console.Clear();
+                    Write(Expense, Amount, Time);
+                    if (input == "Stop" || input == "stop" || input == "STOP" || input == "sToP")
+                    {
+                        Console.WriteLine("E raxmat");
+                        check = false;
+                    }
+                    else
+                    {
+                        check = true;
+                    }
+                }
             }
         }
-        public static void ValidateUser(string userName, string password)
+
+        static void Write(string expense, int amount, string time)
         {
-            if (password != orgPassword || userName != orgUserName)
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"| {expense,-14} | {amount,6} | {time,8} |");
+            sb.Append("======================================");
+            using (StreamWriter sw = new StreamWriter(path, append: true))
             {
-                Logger.LogError(userName, password);
-                Console.WriteLine("Username or password incorrect!");
-
-            }
-            else
-            {
-
-                Console.WriteLine("Welcome to the system...");
+                sw.WriteLine(sb.ToString());
             }
         }
-        public class UserException : Exception
+        static bool isValidTime(string input)
         {
-            public const string Code = "invalid_user_credentials";
-        }
-        public class Logger
-        {
-            public static void LogError(string message, string code)
-            {
-                DateTime dateTime = DateTime.Now;
-                Console.WriteLine("[" + dateTime +" ERR" + "]");
-            }
+            string pattern = @"^([01]?[0-9]|2[0-3]):([0-5]?[0-9])$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(input);
         }
     }
 }
